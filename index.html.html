@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kayra Estrella | Data Analyst Junior</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            pastel: {
+              bg: '#FFFDF9',        /* Fondo crema ultra suave */
+              card: '#FFFFFF',      /* Blanco puro para tarjetas */
+              pinkLight: '#FDF0F4', /* Rosa algodón de azúcar claro */
+              pink: '#F8E1EB',      /* Rosa pastel suave */
+              rose: '#E295B5',      /* Rosa viejo elegante */
+              roseDark: '#C86D93',  /* Rosa profundo acento */
+              accent: '#E6A1B2',    /* Acento rosa cálido */
+              text: '#3D3135',      /* Texto principal marrón/gris oscuro elegante */
+              muted: '#7E6B71',     /* Texto secundario */
+              border: '#F4D8E2'     /* Bordes pastel delicados */
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #FFFDF9;
+      color: #3D3135;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid #F4D8E2;
+    }
+    .glass-card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 30px -10px rgba(226, 149, 181, 0.25);
+      border-color: #E295B5;
+    }
+    .typing-cursor::after {
+      content: '|';
+      animation: blink 1s step-start infinite;
+      color: #C86D93;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #C86D93 0%, #E295B5 50%, #B85B82 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-pastel-pink selection:text-pastel-roseDark">
+
+  <!-- NAVEGACIÓN -->
+  <nav class="fixed top-0 left-0 w-full z-50 glass-card bg-white/70 border-b border-pastel-border backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="font-serif font-bold text-2xl text-pastel-roseDark tracking-tight">KE.</a>
+      
+      <div class="hidden md:flex space-x-8 text-sm font-medium text-pastel-muted">
+        <a href="#inicio" class="hover:text-pastel-roseDark transition">Inicio</a>
+        <a href="#sobre-mi" class="hover:text-pastel-roseDark transition">Sobre Mí</a>
+        <a href="#stack" class="hover:text-pastel-roseDark transition">Stack Técnico</a>
+        <a href="#trayectoria" class="hover:text-pastel-roseDark transition">Trayectoria</a>
+        <a href="#proyectos" class="hover:text-pastel-roseDark transition">Proyectos</a>
+        <a href="#contacto" class="hover:text-pastel-roseDark transition">Contacto</a>
+      </div>
+
+      <a href="#contacto" class="px-5 py-2 text-xs font-semibold uppercase tracking-wider text-white bg-pastel-rose hover:bg-pastel-roseDark rounded-full shadow-sm transition-all duration-300">
+        Contactame
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO / INICIO -->
+  <section id="inicio" class="min-h-screen pt-32 pb-20 flex items-center justify-center relative overflow-hidden bg-gradient-to-b from-pastel-pinkLight/60 via-pastel-bg to-pastel-bg">
+    <!-- Decoración de fondo suave -->
+    <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-pastel-pink/40 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <span class="px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest text-pastel-roseDark bg-pastel-pink border border-pastel-border inline-block mb-6 shadow-sm">
+        Data Analyst Junior
+      </span>
+
+      <h1 class="font-serif text-5xl md:text-7xl font-bold tracking-tight text-pastel-text mb-4">
+        Kayra Estrella
+      </h1>
+
+      <div class="text-xl md:text-2xl font-light text-pastel-muted mb-8 h-10 flex items-center justify-center">
+        <span id="typing-text" class="typing-cursor font-serif italic text-pastel-roseDark font-medium"></span>
+      </div>
+
+      <p class="max-w-2xl mx-auto text-pastel-muted text-base md:text-lg mb-10 leading-relaxed font-light">
+        Estudiante de Gestión y Análisis de Datos en la UBA. Apasionada por transformar grandes volúmenes de datos en información estructurada para la optimización de procesos y decisiones clave.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="#proyectos" class="px-8 py-3.5 bg-pastel-rose hover:bg-pastel-roseDark text-white text-sm font-semibold rounded-full shadow-md hover:shadow-lg transition-all duration-300">
+          Ver Proyectos
+        </a>
+        <a href="https://www.linkedin.com/in/kayra-estrella" target="_blank" class="px-8 py-3.5 bg-white border border-pastel-border text-pastel-text hover:text-pastel-roseDark hover:border-pastel-rose text-sm font-semibold rounded-full shadow-sm transition-all duration-300 flex items-center gap-2">
+          <i class="fab font-bold fa-linkedin text-base text-pastel-rose"></i> LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" class="py-20 bg-pastel-bg border-t border-pastel-border/60">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-5">
+          <div class="relative">
+            <div class="w-full h-80 rounded-3xl bg-gradient-to-tr from-pastel-pink via-pastel-pinkLight to-white border border-pastel-border shadow-inner flex flex-col justify-center items-center p-8 text-center">
+              <div class="w-24 h-24 rounded-full bg-white border-2 border-pastel-rose/40 flex items-center justify-center mb-4 shadow-sm text-pastel-roseDark">
+                <i class="fa-solid fa-chart-line text-4xl"></i>
+              </div>
+              <h3 class="font-serif font-bold text-2xl text-pastel-text">Kayra M. Estrella</h3>
+              <p class="text-xs uppercase tracking-wider text-pastel-roseDark mt-1 font-semibold">UBA - Facultad de Ciencias Económicas</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-7">
+          <span class="text-xs uppercase tracking-widest font-bold text-pastel-roseDark">Perfil Profesional</span>
+          <h2 class="font-serif text-3xl md:text-4xl font-bold text-pastel-text mt-2 mb-6">
+            Transformando datos en soluciones claras
+          </h2>
+          
+          <p class="text-pastel-muted leading-relaxed mb-6 font-light">
+            Estudiante de la Tecnicatura en Gestión y Análisis de Datos en Organizaciones en la Facultad de Ciencias Económicas de la UBA. Cuento con formación cuantitativa, métodos estadísticos y procesamiento de datos mediante Python (pandas, NumPy, Matplotlib, Seaborn) y Excel avanzado.
+          </p>
+
+          <p class="text-pastel-muted leading-relaxed mb-8 font-light">
+            Destaco por mi pensamiento analítico, capacidad de organización, resolución de problemas y orientación a la gestión de procesos comerciales. Busco mi primera experiencia profesional en el área de Análisis de Datos.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-pastel-pinkLight/60 border border-pastel-border">
+              <span class="block text-2xl font-serif font-bold text-pastel-roseDark mb-1">UBA</span>
+              <span class="text-xs text-pastel-muted font-medium">Tecnicatura en Gestión y Análisis de Datos</span>
+            </div>
+            <div class="p-4 rounded-2xl bg-pastel-pinkLight/60 border border-pastel-border">
+              <span class="block text-2xl font-serif font-bold text-pastel-roseDark mb-1">Python & Excel</span>
+              <span class="text-xs text-pastel-muted font-medium">Análisis Cuantitativo y Automatización</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK TÉCNICO -->
+  <section id="stack" class="py-20 bg-gradient-to-b from-pastel-bg to-pastel-pinkLight/30">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs uppercase tracking-widest font-bold text-pastel-roseDark">Herramientas</span>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-pastel-text mt-2">Habilidades Técnicas</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Tarjeta 1 -->
+        <div class="glass-card rounded-3xl p-6 glass-card-hover transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-pastel-pink flex items-center justify-center text-pastel-roseDark mb-4">
+            <i class="fa-brands fa-python text-2xl"></i>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-pastel-text mb-2">Programación & Datos</h3>
+          <p class="text-xs text-pastel-muted mb-4 font-light">Procesamiento y análisis de datos cuantitativos.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">Python</span>
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">pandas</span>
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">NumPy</span>
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">Matplotlib</span>
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">Seaborn</span>
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">SciPy</span>
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">SymPy</span>
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">SQL (Inicial)</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="glass-card rounded-3xl p-6 glass-card-hover transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-pastel-pink flex items-center justify-center text-pastel-roseDark mb-4">
+            <i class="fa-solid fa-file-excel text-2xl"></i>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-pastel-text mb-2">Planillas & BI</h3>
+          <p class="text-xs text-pastel-muted mb-4 font-light">Modelado comercial y visualización de métricas.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">Microsoft Excel Avanzado</span>
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">Tablas Dinámicas</span>
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">Fórmulas Lógicas</span>
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">Power BI (En formación)</span>
+          </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="glass-card rounded-3xl p-6 glass-card-hover transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-pastel-pink flex items-center justify-center text-pastel-roseDark mb-4">
+            <i class="fa-solid fa-code text-2xl"></i>
+          </div>
+          <h3 class="font-serif font-bold text-xl text-pastel-text mb-2">Entornos & Métodos</h3>
+          <p class="text-xs text-pastel-muted mb-4 font-light">Plataformas de desarrollo y fundamentos analíticos.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">Google Colab</span>
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">Jupyter Notebooks</span>
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">Estadística Descriptiva</span>
+            <span class="px-3 py-1 bg-white border border-pastel-border rounded-full text-xs font-medium text-pastel-text">Métodos Cuantitativos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRAYECTORIA: EDUCACIÓN & EXPERIENCIA -->
+  <section id="trayectoria" class="py-20 bg-pastel-bg">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs uppercase tracking-widest font-bold text-pastel-roseDark">Recorrido</span>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-pastel-text mt-2">Educación y Experiencia</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Educación y Cursos -->
+        <div>
+          <h3 class="font-serif text-2xl font-bold text-pastel-text mb-6 flex items-center gap-3">
+            <i class="fa-solid fa-graduation-cap text-pastel-roseDark"></i> Educación & Cursos
+          </h3>
+
+          <div class="space-y-6 relative border-l-2 border-pastel-border pl-6">
+            <!-- Item 1 -->
+            <div class="relative">
+              <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-pastel-rose border-4 border-white"></div>
+              <span class="text-xs font-semibold uppercase text-pastel-roseDark">2026 - Presente</span>
+              <h4 class="font-serif font-bold text-lg text-pastel-text mt-1">Tecnicatura en Gestión y Análisis de Datos</h4>
+              <p class="text-xs font-medium text-pastel-muted">Universidad de Buenos Aires - Facultad de Ciencias Económicas</p>
+              <p class="text-xs text-pastel-muted/80 mt-2 font-light">Laboratorio de Métodos Cuantitativos, Estadística, Sistemas de Información Digitales.</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="relative">
+              <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-pastel-border border-4 border-white"></div>
+              <span class="text-xs font-semibold uppercase text-pastel-roseDark">CBC Completo</span>
+              <h4 class="font-serif font-bold text-lg text-pastel-text mt-1">Ciclo Básico Común</h4>
+              <p class="text-xs font-medium text-pastel-muted">UBA - Facultad de Ciencias Exactas y Naturales</p>
+            </div>
+
+            <!-- Cursos -->
+            <div class="relative pt-4">
+              <div class="absolute -left-[31px] top-5 w-4 h-4 rounded-full bg-pastel-border border-4 border-white"></div>
+              <span class="text-xs font-semibold uppercase text-pastel-roseDark">Certificaciones</span>
+              <div class="space-y-3 mt-2">
+                <div class="p-3 bg-white border border-pastel-border rounded-xl">
+                  <p class="text-xs font-bold text-pastel-text">Introducción a la Ciencia de Datos</p>
+                  <p class="text-[11px] text-pastel-muted">IBM</p>
+                </div>
+                <div class="p-3 bg-white border border-pastel-border rounded-xl">
+                  <p class="text-xs font-bold text-pastel-text">Microsoft Excel & Power BI (En formación)</p>
+                  <p class="text-[11px] text-pastel-muted">Santander Open Academy</p>
+                </div>
+                <div class="p-3 bg-white border border-pastel-border rounded-xl">
+                  <p class="text-xs font-bold text-pastel-text">Acción Climática</p>
+                  <p class="text-[11px] text-pastel-muted">Eco House</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Experiencia Laboral -->
+        <div>
+          <h3 class="font-serif text-2xl font-bold text-pastel-text mb-6 flex items-center gap-3">
+            <i class="fa-solid fa-briefcase text-pastel-roseDark"></i> Experiencia Laboral
+          </h3>
+
+          <div class="space-y-6 relative border-l-2 border-pastel-border pl-6">
+            <!-- Item 1 -->
+            <div class="relative">
+              <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-pastel-rose border-4 border-white"></div>
+              <span class="text-xs font-semibold uppercase text-pastel-roseDark">Feb. 2025 - Presente</span>
+              <h4 class="font-serif font-bold text-lg text-pastel-text mt-1">Venta de Indumentaria Deportiva y Gestión de Clientes</h4>
+              <p class="text-xs font-medium text-pastel-muted mb-2">Emprendimiento Personal - Gestión Comercial y Operativa</p>
+              <ul class="text-xs text-pastel-muted space-y-1.5 list-disc list-inside font-light">
+                <li>Evaluación periódica de ventas y pedidos en MS Excel con tablas dinámicas y fórmulas lógicas.</li>
+                <li>Control y optimización de reposición de stock eficiente.</li>
+                <li>Gestión integral de ventas presenciales, canales online y atención personalizada.</li>
+              </ul>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="relative">
+              <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-pastel-border border-4 border-white"></div>
+              <span class="text-xs font-semibold uppercase text-pastel-roseDark">Mar. 2024 - Dic. 2024</span>
+              <h4 class="font-serif font-bold text-lg text-pastel-text mt-1">Asesora de Ventas</h4>
+              <p class="text-xs font-medium text-pastel-muted mb-2">Osmedica</p>
+              <ul class="text-xs text-pastel-muted space-y-1.5 list-disc list-inside font-light">
+                <li>Venta consultiva y asesoramiento personalizado en servicios de salud.</li>
+                <li>Seguimiento de registro de clientes y cumplimiento de objetivos comerciales.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="py-20 bg-gradient-to-b from-pastel-pinkLight/30 to-pastel-bg border-t border-pastel-border/60">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs uppercase tracking-widest font-bold text-pastel-roseDark">Portafolio</span>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-pastel-text mt-2">Proyectos</h2>
+      </div>
+
+      <div class="max-w-xl mx-auto">
+        <div class="glass-card rounded-3xl p-10 text-center border-2 border-dashed border-pastel-border glass-card-hover transition-all duration-300">
+          <div class="w-16 h-16 rounded-full bg-pastel-pink flex items-center justify-center text-pastel-roseDark mx-auto mb-4">
+            <i class="fa-solid fa-code-branch text-2xl"></i>
+          </div>
+          <span class="px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider text-pastel-roseDark bg-pastel-pink border border-pastel-border inline-block mb-3">
+            En Desarrollo
+          </span>
+          <h3 class="font-serif font-bold text-2xl text-pastel-text mb-2">Próximamente</h3>
+          <p class="text-sm text-pastel-muted font-light leading-relaxed max-w-md mx-auto">
+            Actualmente me encuentro trabajando en el procesamiento de datasets cuantitativos y modelos analíticos en Python. Los repositorios serán publicados aquí a la brevedad.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-20 bg-pastel-bg">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="glass-card rounded-3xl p-8 md:p-12 shadow-sm border border-pastel-border">
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span class="text-xs uppercase tracking-widest font-bold text-pastel-roseDark">Conectemos</span>
+          <h2 class="font-serif text-3xl font-bold text-pastel-text mt-2">¿Hablámos?</h2>
+          <p class="text-sm text-pastel-muted mt-2 font-light">Estoy disponible para oportunidades laborales y proyectos en el área de datos.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <a href="mailto:kayraestrella@gmail.com" class="p-6 rounded-2xl bg-pastel-pinkLight/50 border border-pastel-border flex items-center gap-4 hover:border-pastel-rose transition">
+            <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-pastel-roseDark shadow-sm">
+              <i class="fa-regular fa-envelope text-xl"></i>
+            </div>
+            <div>
+              <span class="block text-xs uppercase tracking-wider text-pastel-muted font-semibold">Correo Electrónico</span>
+              <span class="text-sm font-bold text-pastel-text">kayraestrella@gmail.com</span>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/kayra-estrella" target="_blank" class="p-6 rounded-2xl bg-pastel-pinkLight/50 border border-pastel-border flex items-center gap-4 hover:border-pastel-rose transition">
+            <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center text-pastel-roseDark shadow-sm">
+              <i class="fa-brands fa-linkedin-in text-xl"></i>
+            </div>
+            <div>
+              <span class="block text-xs uppercase tracking-wider text-pastel-muted font-semibold">LinkedIn</span>
+              <span class="text-sm font-bold text-pastel-text">in/kayra-estrella</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="text-center">
+          <button onclick="copyMail()" class="px-8 py-3 bg-pastel-rose hover:bg-pastel-roseDark text-white text-xs font-semibold uppercase tracking-wider rounded-full shadow-sm transition">
+            Copiar Email al Portapapeles
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-8 bg-pastel-bg border-t border-pastel-border/60 text-center">
+    <p class="text-xs text-pastel-muted font-light">
+      © 2026 Kayra Estrella. Todos los derechos reservados.
+    </p>
+  </footer>
+
+  <!-- NOTIFICACIÓN TOAST -->
+  <div id="toast" class="fixed bottom-6 right-6 px-6 py-3 rounded-2xl bg-pastel-text text-white text-xs font-medium shadow-xl opacity-0 transition-opacity duration-300 pointer-events-none z-50">
+    ¡Email copiado al portapapeles!
+  </div>
+
+  <script>
+    // Efecto Typing
+    const textElement = document.getElementById('typing-text');
+    const phrases = [
+      'Estudiante de Gestión y Análisis de Datos',
+      'Python & Excel Avanzado',
+      'Pensamiento Analítico y Cuantitativo'
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+      const currentPhrase = phrases[phraseIndex];
+      
+      if (isDeleting) {
+        textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let typeSpeed = isDeleting ? 40 : 80;
+
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        typeSpeed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typeSpeed = 500;
+      }
+
+      setTimeout(typeEffect, typeSpeed);
+    }
+
+    document.addEventListener('DOMContentLoaded', typeEffect);
+
+    // Copiar email
+    function copyMail() {
+      navigator.clipboard.writeText('kayraestrella@gmail.com');
+      const toast = document.getElementById('toast');
+      toast.classList.remove('opacity-0');
+      toast.classList.add('opacity-100');
+      setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0');
+      }, 3000);
+    }
+  </script>
+</body>
+</html>
